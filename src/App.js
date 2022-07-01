@@ -6,11 +6,14 @@ class App extends React.Component{
     count: 0
   };
 
+  /**
+   * setState 호출시 render가 새로 호출
+   */
   add = () => {
-    console.log("add");
+    this.setState(current => ({count: current.count + 1}));
   };
   minus = () => {
-    console.log("minus");
+    this.setState(current => ({count: current.count - 1}));
   };
 
   render(){
